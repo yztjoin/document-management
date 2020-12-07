@@ -83,7 +83,7 @@ git remote -v
 查看更详细的远程仓库信息
 
 git push origin master
-推送master分支到远程仓库
+推送master分支到远程仓库origin
 
 git checkout -b dev origin/dev
 创建远程origin的dev分支到本地
@@ -118,6 +118,25 @@ git show <标签>
 git show v0.9
 查看标签的详细信息
 
+git remote -v
+查看远程仓库
 
+git fetch origin master
+从远程获取origin最新版本到本地
+
+git log -p master.. origin/master
+比较本地的仓库和远程参考的区别
+
+git merge origin/master
+合并origin的master分支到本地分支
+
+git fetch origin master:temp
+从远程的origin仓库的master分支下载到本地并新建一个分支temp
+
+git diff temp
+比较本地的仓库和远程参考的区别
+
+git remote add <命名> <your_git_addresss>
+git remote origin https://gitee.com/Yoloxiyou/document-management.git
 ```
 

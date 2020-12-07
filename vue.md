@@ -44,3 +44,28 @@ this.$router({
 
 ```
 
+
+
+# Vue.extend() 构造器
+
+使用基础的Vue构造器，创建一个”子类“。蚕食是一个包含自建选项的对象。
+
+data选项是特例，在Vue.extend()中它必须是函数
+
+Vue.extend(HelloTemplate) 创建HelloTemplate组件
+
+```
+const HelloConstructor = Vue.extend(HelloTemplate)
+// 获取实例化子组件
+const helloInstence = new HelloConstructor()
+// 获取dom结构并挂在到body上
+helloInstence.vm = helloInstence.$mount()
+document.body.appendChild(helloInstence.vm.$el)
+```
+
+
+
+
+
+
+
